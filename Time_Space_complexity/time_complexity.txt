@@ -1,0 +1,110 @@
+# Time Complexity
+
+**Time Complexity** means how the number of operations performed by an algorithm grows as the input size `n` grows. It does not mean the actual time in seconds.
+
+## 1. Common Time Complexities
+
+### O(1) — Constant Time
+
+The number of operations stays constant, regardless of the input size.
+
+Example: Accessing an array element.
+
+```cpp
+int x = arr[0];
+```
+
+### O(log n) — Logarithmic Time
+
+The amount of work grows slowly because the input size is repeatedly reduced, usually by half.
+
+Example: Binary Search.
+
+### O(n) — Linear Time
+
+The amount of work grows proportionally to the input size.
+
+Example: Traversing an array.
+
+```cpp
+for(int i = 0; i < n; i++)
+{
+    cout << arr[i];
+}
+```
+
+### O(n log n) — Linearithmic Time
+
+The amount of work grows approximately as `n × log n`, commonly seen in efficient sorting algorithms.
+
+Example: Merge Sort.
+
+### O(n²) — Quadratic Time
+
+The amount of work grows approximately as the square of the input size, commonly due to nested loops.
+
+Example:
+
+```cpp
+for(int i = 0; i < n; i++)
+{
+    for(int j = 0; j < n; j++)
+    {
+        // Operations
+    }
+}
+```
+
+Here, `n × n = n²`.
+
+## 2. Important Rules
+
+**Rule 1: Ignore constants**
+
+```text
+O(2n) → O(n)
+O(5n) → O(n)
+```
+
+**Rule 2: Keep the fastest-growing term**
+
+```text
+O(n² + n)      → O(n²)
+O(n³ + n² + n) → O(n³)
+```
+
+**Rule 3: Separate loops**
+
+```cpp
+for(int i = 0; i < n; i++) { }
+for(int i = 0; i < n; i++) { }
+```
+
+`O(n) + O(n) = O(2n) = O(n)`
+
+**Rule 4: Nested loops**
+
+If both loops run `n` times:
+
+`O(n × n) = O(n²)`
+
+## 3. Quick Reference
+
+| Complexity     | One-line meaning                                      | Example              |
+| -------------- | ----------------------------------------------------- | -------------------- |
+| **O(1)**       | Work stays constant as input grows.                   | Array element access |
+| **O(log n)**   | Work grows slowly as the input is repeatedly divided. | Binary Search        |
+| **O(n)**       | Work grows proportionally to the input size.          | Array traversal      |
+| **O(n log n)** | Work grows as input size multiplied by its logarithm. | Merge Sort           |
+| **O(n²)**      | Work grows quadratically with input size.             | Nested loops         |
+
+## Remember
+
+When analyzing code, ask:
+
+**"How many operations does this code perform as `n` grows?"**
+
+For every DSA problem, identify both:
+
+* **Time Complexity:** How the amount of work grows.
+* **Space Complexity:** How the memory usage grows.

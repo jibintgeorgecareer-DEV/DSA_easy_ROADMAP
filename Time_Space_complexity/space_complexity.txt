@@ -1,0 +1,158 @@
+# Space Complexity
+
+**Space Complexity** means the amount of memory an algorithm needs while running.
+
+### Example — O(1)
+
+int sum = 0;
+
+for(int i = 0; i < n; i++)
+{
+    sum = sum + Array[i];
+}
+```
+
+The algorithm uses variables like:
+
+sum and i
+```
+
+We are **not creating another array** for the input.
+
+So:
+Space Complexity = O(1)
+```
+
+**O(1) means constant space.**
+
+Whether we have:
+
+100 elements
+10,000 elements
+1,000,000 elements
+```
+the variables are still just:
+
+sum and i
+```
+So the extra memory does not grow with `n`.
+
+---
+
+# O(N) Space
+
+Suppose we create another array/vector that grows according to the input size.
+
+vector<int> result;
+
+for(int i = 0; i < n; i++)
+{
+    result.push_back(i);
+}
+
+Here, the `result` vector grows as `n` grows.
+For example:
+
+n = 10     → result has 10 elements
+n = 100    → result has 100 elements
+n = 1000   → result has 1000 elements
+```
+
+So:
+
+Space Complexity = O(N)
+```
+
+**O(N) means the memory grows with the input size.**
+
+# Input Space + Auxiliary Space
+
+Space Complexity = Input Space + Auxiliary Space
+```
+
+### Auxiliary Space
+
+**Auxiliary Space** means the **extra memory** created by the algorithm.
+
+For example:
+
+```cpp
+vector<int> result;
+```
+
+Here, `result` is an additional space created by our algorithm.
+
+---
+
+# Recursion and Space Complexity
+
+In recursion, each function call takes memory on the **stack**.
+
+If there are `n` recursive calls:
+
+```text
+fun(1)
+   ↓
+fun(2)
+   ↓
+fun(3)
+   ↓
+fun(4)
+   ↓
+...
+   ↓
+fun(n)
+```
+
+There are `n` function calls.
+
+Therefore:
+
+```text
+Space Complexity = O(N)
+```
+
+---
+
+# The Main Question
+
+When checking space complexity, ask:
+
+> **"What extra memory grows when `n` grows?"**
+
+Example:
+
+```cpp
+int largest = 0;
+
+for(int i = 0; i < n; i++)
+{
+    if(arr[i] > largest)
+    {
+        largest = arr[i];
+    }
+}
+```
+
+As `n` increases:
+
+```text
+n = 100
+n = 1000
+n = 10000
+```
+
+The variables are still:
+
+```text
+largest
+i
+```
+
+The number of variables does **not** grow with `n`.
+
+Therefore:
+
+```text
+Space Complexity = O(1)
+```

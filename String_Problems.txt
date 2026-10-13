@@ -1,0 +1,17 @@
+1. Reverse String
+2. Reverse string in place (TP)
+3. Count Vowels / Consonents
+4. Remove spaces
+5. Check if one string is substring of another
+6. Check Palindrome
+7. Valid anagrams (HT / Freq)
+8. First non-repeating char (HT / Freq)
+9. Longest substring without repeating (SW / HT)
+10. Longest repeating char replacement (SW / HT)
+11. Reverse word in string (TP)
+12. Remove duplicate char (HT)
+13. Longest common prefix
+14. String compression 
+
+---------------------------------------------------
+Basic -> Two pointer -> Hash / freq -> Sliding window -> SW + HT
