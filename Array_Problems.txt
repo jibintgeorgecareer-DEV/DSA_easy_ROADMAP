@@ -1,7 +1,7 @@
 1. Find Largest & Smallest element
 2. Second Largest element
 3. Check Array is sorted
-3.5 Running sum of array
+3.5 Running sum of array - 1480
 4. Reverse an array (TP)
 5. Two Sum (HT)
 6. Remove Duplicates from sorted array (TP)
